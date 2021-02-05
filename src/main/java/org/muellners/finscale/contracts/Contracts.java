@@ -1,11 +1,11 @@
 package org.muellners.finscale.contracts;
 
+import org.muellners.finscale.contracts.common.GanacheGasProvider;
+import org.muellners.finscale.contracts.generated.contracts.HelloWorld;
 import org.web3j.crypto.Credentials;
 import org.web3j.crypto.WalletUtils;
-import org.web3j.generated.contracts.HelloWorld;
 import org.web3j.protocol.Web3j;
 import org.web3j.protocol.http.HttpService;
-import org.web3j.tx.gas.DefaultGasProvider;
 
 /**
  * <p>This is the generated class for <code>web3j new helloworld</code></p>
@@ -22,7 +22,7 @@ public class Contracts {
         Credentials credentials = WalletUtils.loadCredentials(walletPassword, walletPath);
         Web3j web3j = Web3j.build(new HttpService(nodeUrl));
         System.out.println("Deploying HelloWorld contract ...");
-        HelloWorld helloWorld = HelloWorld.deploy(web3j, credentials, new DefaultGasProvider(), "Hello Blockchain World!").send();
+        HelloWorld helloWorld = HelloWorld.deploy(web3j, credentials, new GanacheGasProvider(), "Hello Blockchain World!").send();
         System.out.println("Contract address: " + helloWorld.getContractAddress());
         System.out.println("Greeting method result: " + helloWorld.greeting().send());
        }
