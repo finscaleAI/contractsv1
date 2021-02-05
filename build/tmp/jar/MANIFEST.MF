@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: org.muellners.finscale.contracts.Contracts
+Multi-Release: true
+
