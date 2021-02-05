@@ -1,2 +1,17 @@
 .gradle/
 .idea/
+
+# Could be improved later on by excluding build/ and including build/generated using !
+build/classes/
+build/distributions/
+build/kotlin/
+build/libs/
+build/node_modules/
+build/reports/
+build/resources/
+build/scripts/
+build/scriptsShadow/
+build/test-results/
+build/tmp/
+build/package.json/
+build/package-lock.json/
