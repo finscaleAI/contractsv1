@@ -13,5 +13,5 @@ build/scripts/
 build/scriptsShadow/
 build/test-results/
 build/tmp/
-build/package.json/
-build/package-lock.json/
+build/package.json
+build/package-lock.json
