@@ -7,14 +7,14 @@ contract Ledger {
         ASSET, LIABILITY, EQUITY, REVENUE, EXPENSE
     }
 
-    uint id;
-    string identifier;
-    string name;
-    LedgerType ledgerType;
-    uint totalValue;
-    string description;
-    bool showAccountsInChart;
-    uint parentLedgerId;
+    uint public id;
+    string public identifier;
+    string public name;
+    LedgerType public ledgerType;
+    uint public totalValue;
+    string public description;
+    bool public showAccountsInChart;
+    uint public parentLedgerId;
 
     constructor(uint _id, string memory _identifier, string memory _name,
         string memory _ledgerTypeAsString, uint _totalValue, string memory _description,
